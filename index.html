@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=">
+  <title>Simple Timer</title>
+  <link rel="stylesheet" href="/app/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h2>SImple timer Made with javascript</h2>
+    <p>Input your time in Hours minutes and seconds</p>
+    <div class="input">
+      <input type="text" class="input-box" id="box1" placeholder="hours">
+      <input type="text" class="input-box" id="box2" placeholder="minutes">
+      <input type="text" class="input-box" id="box3" placeholder="seconds">
+      <br>
+    </div>
+    <br>
+    <div class="buttons">
+      <button type="submit" onclick="getValues()">submit</button>
+      <button type="reset" onclick="resetValues()" value="Reset">Clear</button>
+      <button type="submit" onclick="startTimer()">Start</button>
+       <button type="submit" onclick="clearTimer()">Reset</button>
+    </div>
+    <br> <br>
+    <div class="timer-container">
+      <div class="circles" id="circle1">1</div>
+      <p>:</p>
+      <div class="circles" id="circle2">2</div>
+      <p>:</p>
+      <div class="circles" id="circle3">3</div>
+    </div>
+  </div>
+  <script src="/app/script.js"></script>
+</body>
+
+</html>

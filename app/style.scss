@@ -1,0 +1,75 @@
+body {
+  background: #333;
+  color: white;
+  font-size: 100%;
+  font-family: mongolian;
+}
+@mixin flex($flexdirection) {
+  display: flex;
+  flex-flow: $flexdirection wrap;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  @include flex(column);
+  width: 100%;
+  h2 {
+    font-size: 40px;
+  }
+  p {
+    font-size: 25px;
+  }
+  .input {
+    @include flex(row);
+    width: 100%;
+    .input-box {
+      height: 24px;
+      width: 100px;
+      margin: 1%;
+      font-size: 20px;
+      color: yellow;
+      background: #333;
+      border: none;
+      border-bottom: 2px solid white;
+      outline: none;
+    }
+  }
+  .buttons {
+    button {
+      border: 1px solid white;
+      outline: none;
+      background: transparent;
+      color: white;
+      width: 80px;
+      height: 40px;
+      &:hover {
+        background: white;
+        color: black;
+      }
+    }
+  }
+  .timer-container {
+    width: 80%;
+    height: 100%;
+    background: lightskyblue;
+    border-radius: 20px;
+    @include flex(row);
+    p {
+      color: black;
+      font-size: 80px;
+    }
+    .circles {
+      @include flex(row);
+      width: 220px;
+      height: 250px;
+      background: white;
+      margin: 2%;
+      border-radius: 100%;
+      outline: none;
+      border: 10px solid black;
+      text-align: center;
+      color: black;
+      font-size: 60px;
+    }
+  }
+}
